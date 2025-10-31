@@ -327,3 +327,67 @@ nav a:hover::after {
         font-size: 0.9em;  
     }
 }
+
+ /* NOVOS ESTILOS PARA A SEÇÃO DE DEPOIMENTOS */
+ .testimonials-section {
+    padding: 80px 0; 
+    background: linear-gradient(135deg, rgba(6, 22, 94, 0.95) 0%, rgba(38, 17, 160, 0.95) 100%);
+    color: #ffffff; 
+ }
+.testimonials-section .container { 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 20px; 
+    text-align: center; 
+}
+
+.testimonials-section-title {
+    font-size: 3em; 
+    font-weight: 700; 
+    margin-bottom: 10px;
+    color: #ffffff;
+    font-family: 'Poppins', Arial, sans-serif;
+}
+
+.testimonials-section-subtitle {
+    font-size: 1.1em;
+    color: #cccccc; 
+    margin-bottom: 50px; 
+    max-width: 800px; 
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Poppins', Arial, sans-serif;
+}
+
+/* Contêiner do Carrossel */
+.carousel-container {
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden; /* Esconde o conteúdo que transborda horizontalmente */
+    position: relative;
+    padding-bottom: 20px; 
+}
+
+.testimonial-cards-wrapper {
+    display: flex;
+    gap: 30px;
+    padding: 20px; 
+    scroll-snap-type: x mandatory; /* Habilita o "snap" de rolagem para os cartões */
+    -webkit-overflow-scrolling: touch; /* Suaviza a rolagem em dispositivos iOS */
+    overflow-x: auto; /* Permite a rolagem horizontal */
+    justify-content: flex-start; /* Alinha os cartões ao início para a rolagem */
+}
+
+/* Cartão de Depoimento Individual */
+.testimonial-card {
+    background-color: #1a1b3f; 
+    border-radius: 15px; 
+    padding: 30px;
+    text-align: left;
+    flex-shrink: 0; /* Impede que o cartão encolha */
+    width: calc((100% / 3) - 20px); /* Calcula a largura para 3 cartões com espaçamento */
+    max-width: 380px; 
+    box-sizing: border-box; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+    scroll-snap-align: center; /* Ponto de "snap" para cada cartão (centraliza ao rolar) */
+}
