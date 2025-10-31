@@ -376,7 +376,11 @@ nav a:hover::after {
     -webkit-overflow-scrolling: touch; /* Suaviza a rolagem em dispositivos iOS */
     overflow-x: auto; /* Permite a rolagem horizontal */
     justify-content: flex-start; /* Alinha os cartões ao início para a rolagem */
+
+    -ms-overflow-style: none;  /* Esconder para IE e Edge (legado) */
+    scrollbar-width: none;  /* Esconder para Firefox */
 }
+
 
 /* Cartão de Depoimento Individual */
 .testimonial-card {
@@ -391,3 +395,89 @@ nav a:hover::after {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
     scroll-snap-align: center; /* Ponto de "snap" para cada cartão (centraliza ao rolar) */
 }
+
+/* Cabeçalho do Cartão (Avatar, Nome, Estrelas) */
+.testimonial-card .card-header { /* Especifica para evitar conflito com card-header de outras seções, se houver */
+    display: flex;
+    align-items: center; 
+    margin-bottom: 20px;
+}
+
+.testimonial-card .avatar {
+    width: 50px;
+    height: 60px;
+    border-radius: 80%; 
+    margin-right: 15px;
+    object-fit: cover; /* Garante que a imagem preencha o círculo */
+    border: 2px solid #5d5e75; 
+}
+
+.testimonial-card .user-name {
+    font-size: 1.2em;
+    font-weight: 600; 
+    margin: 0;
+    color: #ffffff;
+}
+
+.testimonial-card .user-handle {
+    font-size: 0.9em;
+    color: #a0a0b8; 
+    margin: 0;
+}
+
+.testimonial-card .stars {
+    display: flex;
+    font-size: 1.3em; 
+    margin-left: auto; 
+    gap: 3px;
+}
+
+.testimonial-card .star {
+    color: #8a8af8; 
+}
+
+.testimonial-card .star.empty {
+    color: #5d5e75;  
+}
+
+.testimonial-text {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #cccccc; 
+}
+
+/* Paginação do Carrossel (Pontos) */
+.carousel-pagination {
+    display: flex;
+    justify-content: center; 
+    margin-top: 50px;
+    gap: 10px; 
+}
+
+.carousel-pagination .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%; 
+    background-color: #5d5e75; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+}
+
+.carousel-pagination .dot.active {
+    background-color: #ffffff; 
+    
+}
+.testimonial-card .star {
+    color: #8a8af8; 
+}
+
+.testimonial-card .star.empty {
+    color: #5d5e75; 
+}
+
+.testimonial-text {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #cccccc; 
+}
+
